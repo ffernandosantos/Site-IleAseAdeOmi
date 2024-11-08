@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Casa de Axé - Calendário de Eventos</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding-top: 110px; /* Ajustado para compensar o header e o nav fixos */
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav {
+            position: fixed;
+            top: 65px;
+            width: 100%;
+            background-color: #444;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            overflow: hidden;
+            color: #fff;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            padding: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #ffcc00;
+        }
+
+        section {
+            margin: 10px 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .year-menu {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .year-menu button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .year-menu button:hover {
+            background-color: #ffcc00;
+        }
+
+        .calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 10px;
+            text-align: center;
+        }
+
+        .day {
+            padding: 20px;
+            background-color: #eee;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .day.event {
+            background-color: #ffcc00;
+            position: relative;
+        }
+
+        .day:hover {
+            transform: scale(1.1);
+            background-color: #ddd;
+        }
+
+        .event-description {
+            display: none;
+            background-color: #fff;
+            color: #333;
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .day.event:hover .event-description {
+            display: block;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Esconde calendários por padrão */
+        .calendar-container {
+            display: none;
+        }
+
+        .calendar-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Casa de Axé - Calendário de Eventos</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#mural">Mural de Eventos</a></li>
+            <li><a href="#artigos">Artigos dos Eventos</a></li>
+            <li><a href="#historia">História e Fundação</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#mensagens">Mensagens Diárias</a></li>
+        </ul>
+    </nav>
+
+    <section id="mural" class="calendar-section">
+        <div class="content">
+            <h2>Calendário de Eventos</h2>
+
+            <!-- Menu para selecionar o ano -->
+            <div class="year-menu">
+                <button onclick="showCalendar('calendar-2024')">2024</button>
+                <button onclick="showCalendar('calendar-2025')">2025</button>
+            </div>
+
+            <!-- Calendário de 2024 -->
+            <div id="calendar-2024" class="calendar-container active">
+                <h3>Dezembro de 2024</h3>
+                <div class="calendar">
+                    <div>Dom</div><div>Seg</div><div>Ter</div><div>Qua</div><div>Qui</div><div>Sex</div><div>Sáb</div>
+                    <div></div><div></div><div></div><div></div><div></div><div class="day">1</div>
+                    <div class="day">2</div>
+                    <div class="day">3</div>
+                    <div class="day">4</div>
+                    <div class="day event">
+                        5
+                        <div class="event-description">Festa

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ILE ASE ADE OMI OLA WURA ODE</title>
+    <style>
+        @font-face {
+            font-family: 'Commercial Script MN';
+            src: url('fonts/CommercialScriptMN.woff') format('woff'); /* Caminho da fonte */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(imagens/logo.png); /* Caminho da imagem */
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semi-transparente */
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-family: 'Commercial Script MN', cursive; /* Fonte personalizada */
+            font-size: 32px;
+            color: gold;
+            margin: 0;
+        }
+
+        nav {
+            margin-left: auto;
+            flex-grow: 1;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        nav ul li {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        .content {
+            padding: 120px 20px 20px 20px;
+        }
+
+        #inicio {
+            background-color: rgba(255, 255, 255, 0); /* Totalmente transparente */
+            color: black;
+            padding: 40px;
+            margin: 20px 0;
+        }
+
+        #eventos {
+            background-color: rgba(255, 250, 205, 0.8); /* Fundo amarelo claro semi-transparente */
+            color: black;
+            padding: 40px;
+            margin: 20px 0;
+        }
+
+        #nossa-historia {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparente */
+            color: black;
+            padding: 40px;
+            margin: 20px 0;
+        }
+
+        #contato {
+            background-color: rgba(255, 250, 205, 0.8); /* Semi-transparente */
+            color: black;
+            padding: 40px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ILE ASE ADE OMI OLA WURA ODE</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#nossa-historia">Nossa História</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <section id="inicio">
+            <h2>Início</h2>
+            <p>Bem-vindo ao nosso espaço sagrado. Aqui você pode conhecer mais sobre nossa comunidade, eventos e nossa história.</p>
+        </section>
+
+        <section id="eventos">
+            <h2>Eventos</h2>
+            <p>Fique por dentro de todos os nossos eventos e celebrações. Acompanhe a agenda e participe!</p>
+        </section>
+
+        <section id="nossa-historia">
+            <h2>Nossa História</h2>
+            <p>Conheça mais sobre a fundação e os valores que formam a base da nossa comunidade e tradição.</p>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para tirar dúvidas, agendar visitas ou saber mais sobre nossos rituais.</p>
+        </section>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Ilê Asè Adê Omì Olá Wura Odé</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url(imagens/backgroud.png);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: right bottom;
+            background-attachment: fixed;
+        }
+        
+        /* Para os cookies*/
+        .cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cookie-banner p {
+            margin: 0;
+            padding: 0 10px;
+        }
+
+        .cookie-btn {
+            margin-left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .cookie-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Estilo para o cabeçalho */
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+	        position: fixed; /* Fixa o cabeçalho */
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Garante que o cabeçalho fique acima do conteúdo */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para destacar o cabeçalho */
+        }
+
+        /* Estilo para o título */
+        h1 {
+            color: gold;
+            margin: 0;
+            font-size: 32px;
+            text-align: left;
+        }
+
+        /* Ajuste para centralizar mais os menus */
+        nav {
+            margin-left: auto; /* Empurra o menu para longe do título */
+            flex-grow: 0.5; /* Faz com que o menu ocupe o espaço restante */
+        }
+
+        /* Estilo para o menu */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between; /* Espaça os itens automaticamente */
+            width: 100%; /* Ocupa toda a largura disponível */
+        }
+
+        nav ul li {
+            flex-grow: 1; /* Faz cada item crescer igualmente */
+            text-align: center; /* Centraliza o texto de cada item */
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+        }
+
+        nav ul li a:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Estilo para o conteúdo, compensando a altura do cabeçalho fixo */
+        .content {
+            padding: 70px 20px 20px; /* Adiciona espaço no topo para evitar sobreposição */
+        }
+
+        /* Estilos das seções */
+        #inicio {
+            background-color: #ffffff;
+            color: black;
+            padding: 40px; 
+            text-indent: 30px; /* Define o recuo de 30px na primeira linha de cada parágrafo */
+            line-height: 1.6; /* Adiciona um espaçamento entre as linhas para melhorar a legibilidade */
+        }
+
+        .inicio-container {
+            display: flex;
+            justify-content: center; /* Centraliza a imagem horizontalmente */
+            align-items: center; /* Centraliza a imagem verticalmente */
+        }
+
+        .inicio-imagem {
+            max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+            height: auto;
+        }
+
+        #eventos {
+            background-color: rgba(255, 255, 0, 0.425);
+            color: black;
+            padding: 40px;
+            text-indent: 30px; /* Define o recuo de 30px na primeira linha de cada parágrafo */
+            line-height: 1.6; /* Adiciona um espaçamento entre as linhas para melhorar a legibilidade */
+            /*margin: 0; /* Remove margens externas */
+            /*box-sizing: border-box; /* Inclui padding dentro da largura total */
+        }
+
+        #nossa-historia {
+            background-color: rgba(255, 255, 255, 0);
+            color: black;
+            padding: 40px;
+            text-indent: 30px; /* Define o recuo de 30px na primeira linha de cada parágrafo */
+            line-height: 1.6; /* Adiciona um espaçamento entre as linhas para melhorar a legibilidade */
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center; /* Centraliza o vídeo horizontalmente */
+            margin-top: 20px; /* Adiciona um espaçamento acima do vídeo */
+        }
+
+        .video-container iframe {
+            max-width: 100%; /* Torna o vídeo responsivo */
+            height: auto;
+            aspect-ratio: 16 / 9; /* Mantém a proporção 16:9 */
+        }
+
+        #contato {
+            background-color: rgba(255, 255, 0, 0.425);
+            color: black;
+            padding: 40px;
+            /*margin: 0; /* Remove margens externas */
+            /*box-sizing: border-box; /* Inclui padding dentro da largura total */
+        }
+
+        footer {
+            background-color: #333; /* Cor de fundo do rodapé */
+            color: #fff; /* Cor do texto */
+            text-align: center;  /* Centraliza o texto */
+            padding: 10px 0; /* Espaçamento no topo e na parte inferior */
+            font-size: 14px; /* Tamanho do texto */
+            position: relative; /* Fixa o rodapé na parte inferior do conteúdo */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Ilê Asè Adê Omì Olá Wura Odé</h1>
+        <!-- Menu horizontal -->
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#nossa-historia">Nossa História</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo -->
+    <div class="content">
+        <section id="inicio">
+            <div class="inicio-container">
+                <img src="imagens/logo-com-nome.png" alt="Logo do Ilê Asè Adê Omì Olá Wura Odé" class="inicio-imagem">
+            </div>
+            <p>É com muita alegria e respeito que abrimos as portas do nosso espaço sagrado para você.</p>
+            <p>Aqui, cada detalhe foi pensado para compartilhar com carinho e autenticidade nossa história e o legado ancestral que preservamos com devoção. Esperamos que ao navegar por nosso site, você sinta a força e a beleza de nossa tradição e se sinta convidado a conhecer mais sobre nossa comunidade e valores. Axé!</p>
+        </section>
+
+        <section id="eventos">
+            <h2>Eventos</h2>
+            <p>Em breve disponibilizaremos aqui os registros dos eventos realizados em nosso Ilê a partir do ano de 2025.</p>
+            <p>Não fique de fora, acompanhe nossa agenda e participe!</p>
+        </section>
+
+        <section id="nossa-historia">
+            <h2>Nossa História</h2>
+                <p>Inicialmente o <strong>Ilê Asè Adê Omì Olá Wura Odê</strong> foi fundado na região do CPA em Cuiabá em meados do ano de 2017 nos fundos da casa do Babalorixá Luiz Guedes de Oxum como algo bem simples, apenas uma sala pequena com banheiro onde mal cabiam oito pessoas.</p>
+                <p>A princípio havia sido idealizado pelo babalorixá apenas os trabalhos da raiz de Jurema Sagrada, uma religião nascida no Brasil na região nordestina que vincula o povo português que veio para o país com as tradições ameríndias. Religião essa que foi o primeiro contato do babalorixá com o culto aos ancestrais (nossa ancestralidade) onde apenas anos depois ele veio a ter o contato com o Candomblé de fato e se iniciou também nessas tradições de cultos aos orixás.</p>
+                <p>Apenas de serem de religiões inicialmente diferentes o comumente chamado de pai Luiz convidou o seu pai de santo do Candomblé como sinal de respeito e carinho para que ele viesse prestigiar a inauguração com sua presença onde após sua chegada o pai Carlos de Oxumaré instruiu seu filho que deveria plantar os axés e sua casa (pilares iniciais necessários para o culto aos orixás) e que ele também deveria cultuá-los e o alertou de que ele não ficaria por muito tempo naquele espaço.  Apesar das incertezas com as instruções do pai Carlos deu-se início aos cultos também aos orixás.</p>
+                <p>Não demorou muito para que a previsão do pai Carlos se concretizar e de fato trocaram de endereço e foram rumo a outro lugar que veio a ser na <a href="https://g.co/kgs/nWa1H9K" target="_blank" rel="external">Rua Cajá-manga no Capão do Pequi em Várzea Grande/MT</a> onde se encontra até os dias de hoje.</p>
+                <p>Começar em um novo endereço foi difícil devido ao barracão estar abandonado por muitos anos sem cuidados, mas com energia e afinco o lugar foi limpo e reorganizado e, por mais que houvesse dificuldades no meio do caminho a fé sempre nos guiou e nos mostrou o caminho a ser seguido.</p>
+                <p>Hoje quase sete anos depois foi conquistado a tão aguardada CNPJ da casa de axé e com isso algumas melhorias e possibilidades.
+                <p>Atualmente na casa se é louvado aos orixás assim como os mestres, mestras e demais guias da Jurema Sagrada. Apesar de ser um lugar humilde e simples, todos seguimos convictos de que estamos no caminho certo rumo a evolução espiritual e cumprindo com nossos deverem quando a omorixás nesse plano.
+                </p>
+                <p>Fique agora com um vídeo/documentário onde nosso babalorixá conta um pouco sobre sua caminhada na religião e incorpora a história do nosso Ilê <STRong>(EXEMPLO PROVISÓRIO)</STRong>.</p>
+
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dhAW3x9g_Rc?si=Mi3_7MX86q7s-tdh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para tirar dúvidas, agendar visitas ou saber mais sobre nossa comunidade.</p>
+
+            <p><img src="imagens/instagram.png" alt="Icone do Instagram"> <a href="https://www.instagram.com/ileaseadeomiolawuraode?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="external">Ilê Asè Adê Omì Olá Wura Odé</a></p>
+            
+            <p><img src="imagens/whatsapp.png" alt="Icone do WhatsApp"> <a href="https://wa.me/+5565999391977/?text=urlencodedtex" target="_blank" rel="external">Balalorixá Luiz ty Ossun</a></p>
+            
+            <p><img src="imagens/e-mail.png" alt="Icone do E-mail"> <a href="mailto:contato@ileaseadeomi.org.br">contato@ileaseadeomi.org.br</a></p>
+
+            <p><img src="imagens/alfinete.png" alt="Icone do Maps"> <a href="https://g.co/kgs/WncA4qe"> Rua Cajá-manga, Capão do Pequi - Várzea Grande/MT</a></p>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 Ilê Asè Adê Omì Olá Wura Odé. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+    <!-- Banner de Cookies -->
+    <div id="cookie-banner" class="cookie-banner">
+        <p>Este site utiliza cookies para melhorar sua experiência. Para saber mais, leia nossa <a href="politica-privacidade.html" target="_blank">Política de Privacidade</a>.</p>
+        <button id="accept-cookies" class="cookie-btn">Aceitar</button>
+        <button id="decline-cookies" class="cookie-btn">Rejeitar</button>
+    </div>
+
+    <!-- JavaScript do banner de cookies -->
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Verifica se o consentimento já foi dado
+        if (!localStorage.getItem("cookieConsent")) {
+            document.getElementById("cookie-banner").style.display = "flex";
+        }
+    
+        // Ação para aceitar cookies
+        document.getElementById("accept-cookies").addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "accepted");
+            document.getElementById("cookie-banner").style.display = "none";
+            enableCookies();
+        });
+    
+        // Ação para rejeitar cookies
+        document.getElementById("decline-cookies").addEventListener("click", function () {
+            localStorage.setItem("cookieConsent", "declined");
+            document.getElementById("cookie-banner").style.display = "none";
+        });
+    });
+    
+    function enableCookies() {
+        // Aqui você pode habilitar os scripts de cookies não essenciais
+        // Por exemplo, scripts de rastreamento e publicidade
+    }
+    </script>
+
+</body>
+</html>
